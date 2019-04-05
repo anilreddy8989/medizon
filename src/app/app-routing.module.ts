@@ -7,6 +7,7 @@ import { FeaturesComponent } from '../app/features/features.component';
 import { SupportComponent } from '../app/support/support.component';
 import { CartComponent } from '../app/cart/cart.component';
 
+import { MedicinesInfoComponent } from '../app/medicines-info/medicines-info.component';
 
 const routes: Routes = [
   { path: '', component: MyMedicinesComponent },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'features', component: FeaturesComponent},
   { path: 'support', component: SupportComponent},
   { path: 'cart', component: CartComponent},
+  { path: 'medicines-info', component: MedicinesInfoComponent},
   { path: '',
     redirectTo: '/',
     pathMatch: 'full'
