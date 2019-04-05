@@ -10,6 +10,7 @@ import { SignComponent } from './sign/sign.component';
 import { MedicinesComponent } from './medicines/medicines.component';
 import { FeaturesComponent } from './features/features.component';
 import { SupportComponent } from './support/support.component';
+import { MedicinesInfoComponent } from './medicines-info/medicines-info.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SupportComponent } from './support/support.component';
     SignComponent,
     MedicinesComponent,
     FeaturesComponent,
-    SupportComponent
+    SupportComponent,
+    MedicinesInfoComponent
   ],
   imports: [
     BrowserModule,
