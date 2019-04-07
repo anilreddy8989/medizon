@@ -8,7 +8,7 @@ import { ApiService } from '../services/api.service';
 })
 export class MyMedicinesComponent implements OnInit {
 
-  private medicines;
+  public medicines;
   constructor(
     private apiService: ApiService) { }
 
