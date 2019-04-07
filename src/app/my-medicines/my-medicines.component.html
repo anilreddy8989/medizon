@@ -7,36 +7,13 @@
 
 <div class="container">
   <div class="card-deck mb-3 text-center">
-    <div class="card mb-4 shadow-sm">
+    <div class="card mb-4 shadow-sm" *ngFor="let medicine of medicines">
       <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Neo Citran</h4>
+        <h4 class="my-0 font-weight-normal">{{medicine.name}}</h4>
       </div>
       <div class="card-body">
-        <img src="/assets/neocitran_cold.jpg"/>
+        <img src="/assets/{{medicine.image}}">
         <button type="button" class="btn btn-lg btn-block btn-outline-primary">Order Now</button>
-      </div>
-    </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Neo Citran</h4>
-      </div>
-      <div class="card-body">
-          <img src="/assets/neocitran_total.jpg"/>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Order Now</button>
-      </div>
-    </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Neo Citran</h4>
-      </div>
-      <div class="card-body">
-          <img src="/assets/neocitran_colds.jpg"/>
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Order Now</button>
-      </div>
-    </div>
-    <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 font-weight-normal">Neo Citran</h4>
       </div>
     </div>
   </div>

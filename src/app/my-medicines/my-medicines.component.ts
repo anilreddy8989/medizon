@@ -8,13 +8,16 @@ import { ApiService } from '../services/api.service';
 })
 export class MyMedicinesComponent implements OnInit {
 
+  public medicines;
   constructor(
     private apiService: ApiService) { }
 
   ngOnInit() {
-    alert("This is my-medicine");
-    console.log(this.apiService.getCustomers().subscribe(res => {
-      console.log(res);
+    //alert("This is my-medicine");
+    console.log(this.apiService.getMedicines().subscribe(res => {
+      //console.log(res);
+      this.medicines = res;
+      console.log(this.medicines[0]);
     },
     console.error
   ))

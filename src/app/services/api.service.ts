@@ -15,8 +15,8 @@ export class ApiService {
   }
 
   // GET list of public, future events
-  getCustomers() {
+  getMedicines() {
     return this.http
-      .get(`${API_URL}/getCustomers`);
+      .get(`${API_URL}/getMedicines`);
   }
 }
