@@ -10,6 +10,8 @@ import { SignComponent } from './sign/sign.component';
 import { MedicinesComponent } from './medicines/medicines.component';
 import { FeaturesComponent } from './features/features.component';
 import { SupportComponent } from './support/support.component';
+import { RegisterComponent } from './register/register.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 import { MedicinesInfoComponent } from './medicines-info/medicines-info.component';
 
@@ -21,6 +23,8 @@ import { MedicinesInfoComponent } from './medicines-info/medicines-info.componen
     MedicinesComponent,
     FeaturesComponent,
     SupportComponent,
+    RegisterComponent,
+    CheckoutComponent,
     CartComponent,
     MedicinesInfoComponent
   ],
