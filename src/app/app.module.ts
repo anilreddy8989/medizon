@@ -10,6 +10,8 @@ import { SignComponent } from './sign/sign.component';
 import { MedicinesComponent } from './medicines/medicines.component';
 import { FeaturesComponent } from './features/features.component';
 import { SupportComponent } from './support/support.component';
+import { RegisterComponent } from './register/register.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { SupportComponent } from './support/support.component';
     SignComponent,
     MedicinesComponent,
     FeaturesComponent,
-    SupportComponent
+    SupportComponent,
+    RegisterComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
