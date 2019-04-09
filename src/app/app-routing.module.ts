@@ -10,6 +10,7 @@ import { CheckoutComponent } from '../app/checkout/checkout.component';
 import { CartComponent } from '../app/cart/cart.component';
 
 import { MedicinesInfoComponent } from '../app/medicines-info/medicines-info.component';
+import { OrderconfirmationComponent } from '../app/orderconfirmation/orderconfirmation.component';
 
 const routes: Routes = [
   { path: '', component: MyMedicinesComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent},
   { path: 'medicines-info', component: MedicinesInfoComponent},
   { path: 'medicines/:id', component: MedicinesInfoComponent},
+  { path: 'orderconfirmation', component: OrderconfirmationComponent},
   { path: '',
     redirectTo: '/',
     pathMatch: 'full'

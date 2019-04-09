@@ -14,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 import { MedicinesInfoComponent } from './medicines-info/medicines-info.component';
+import { OrderconfirmationComponent } from './orderconfirmation/orderconfirmation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MedicinesInfoComponent } from './medicines-info/medicines-info.componen
     RegisterComponent,
     CheckoutComponent,
     CartComponent,
-    MedicinesInfoComponent
+    MedicinesInfoComponent,
+    OrderconfirmationComponent
   ],
   imports: [
     BrowserModule,
