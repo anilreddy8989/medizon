@@ -3,6 +3,7 @@
 <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
   <h1 class="display-4">Project Medizon</h1>
   <p class="lead">Online Delivery of the Medicines. The Proposal is focusing in E-Commerce.</p>
+  <p class="lead">Note: This project is just for the submission of the course project. This is not developed for any business purpose or internal or external benefits.</p>
 </div>
 
 <div class="container">
@@ -13,7 +14,7 @@
       </div>
       <div class="card-body">
         <img src="/assets/{{medicine.image}}">
-        <button type="button" class="btn btn-lg btn-block btn-outline-primary">Order Now</button>
+        <button type="button" class="btn btn-lg btn-block btn-outline-primary" (click)="navigateToOrder($event, medicine._id)">Order Now</button>
       </div>
     </div>
   </div>

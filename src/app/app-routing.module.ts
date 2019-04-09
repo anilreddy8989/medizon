@@ -17,6 +17,7 @@ const routes: Routes = [
   { path: 'support', component: SupportComponent},
   { path: 'cart', component: CartComponent},
   { path: 'medicines-info', component: MedicinesInfoComponent},
+  { path: 'medicines/:id', component: MedicinesInfoComponent},
   { path: '',
     redirectTo: '/',
     pathMatch: 'full'

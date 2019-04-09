@@ -19,4 +19,9 @@ export class ApiService {
     return this.http
       .get(`${API_URL}/getMedicines`);
   }
+
+  apiMedicine(medicineid){
+    return this.http
+      .get(`${API_URL}/medicines/`+medicineid);
+  }
 }

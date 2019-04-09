@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-medicines',
@@ -10,7 +11,8 @@ export class MyMedicinesComponent implements OnInit {
 
   public medicines;
   constructor(
-    private apiService: ApiService) { }
+    private apiService: ApiService,
+    private router: Router) { }
 
   ngOnInit() {
     //alert("This is my-medicine");
@@ -21,6 +23,12 @@ export class MyMedicinesComponent implements OnInit {
     },
     console.error
   ))
+  }
+
+  navigateToOrder($event, medicineId) {
+    //alert(medicineId.$oid);
+   
+    this.router.navigate(['/medicines/'+medicineId.$oid]);
   }
 
 }
