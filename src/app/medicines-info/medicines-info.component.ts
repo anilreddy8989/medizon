@@ -10,6 +10,7 @@ import { ApiService } from '../services/api.service';
 export class MedicinesInfoComponent implements OnInit {
 
   public medicineId:any;
+  public medicineDetails;
 
   constructor(private route: ActivatedRoute,
     private apiService: ApiService) { }
@@ -20,7 +21,9 @@ export class MedicinesInfoComponent implements OnInit {
     })
     this.apiService.apiMedicine(this.medicineId).subscribe(res =>{
       console.log(res);
+      this.medicineDetails=res;
     })
   }
+  
 
 }
