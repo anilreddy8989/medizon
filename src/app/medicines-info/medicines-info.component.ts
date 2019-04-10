@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
 import { ApiService } from '../services/api.service';
+import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
 
 @Component({
   selector: 'app-medicines-info',
@@ -11,9 +12,12 @@ export class MedicinesInfoComponent implements OnInit {
 
   public medicineId:any;
   public medicineDetails;
+  KEY = 'CART';
+  value: any = null;
 
   constructor(private route: ActivatedRoute,
-    private apiService: ApiService) { }
+    private apiService: ApiService,
+    public local: LocalStorageService, public session: SessionStorageService) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -25,5 +29,7 @@ export class MedicinesInfoComponent implements OnInit {
     })
   }
   
-
+  addToCart() {
+    this.local.set(this.KEY, this.medicineDetails);
+  }
 }

@@ -18,14 +18,14 @@
     
     <div class="allign-name">
         <div class="card-body d-flex flex-column align-items-start">
-        <h2> <strong class="d-inline-block mb-2 text-primary">Neo citran</strong></h2>        
+        <h2> <strong class="d-inline-block mb-2 text-primary">{{medicineDetails.name}}</strong></h2>        
         
        </div>
     </div>
  
     <div class="allign-name">
         <div class="text-right">                         
-          <a href="/cart" class="btn btn-primary" role="button">Add to cart</a>
+          <a href="/cart" class="btn btn-primary" role="button" (click)="addToCart()">Add to cart</a>
         </div> 
         </div> 
    
