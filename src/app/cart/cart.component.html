@@ -1,5 +1,5 @@
 <div class= "pq">
-    <h1 style = "font-size:20px;">Cart</h1>
+    <h1 style = "font-size:30px;">Cart</h1>
     <img src="assets/cart-icon-28341.png" height= "50" width= "50">
 
 
@@ -10,30 +10,43 @@
           
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
             <img src="assets/neocitran_cold.jpg" alt="Neo citran"  >
-          <div class="card-body d-flex flex-column align-items-start">
+            <div class="card-body d-flex flex-column align-items-start">
            <h2> <strong class="d-inline-block mb-2 text-primary">Neo citran</strong></h2>
             <h5 class="mb-0">
-              <a class="text-muted" >Quantity :</a>
+                  <a class="input-group"> Quantity &nbsp;
+      
+                  <input type="button" value="-" class="button-minus" data-field="quantity">
+                  <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+                  <input type="button" value="+" class="button-plus" data-field="quantity">
+                   </a>
             </h5>
             <p>price:</p>
            
           </div>
         </div>
       </div>
-    </div>
-    <div class="row mb-3">
-      <img src="assets/neocitran_cold.jpg" alt="Neo citran"  >
-      <div class="col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+    
+      <div class="col-md-12">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        
+        <img src="assets/neocitran_cold.jpg" alt="Neo citran"  >
+      
+        
           <div class="card-body d-flex flex-column align-items-start">
            <h2> <strong class="d-inline-block mb-2 text-primary">Neo citran</strong></h2>
-            <h5 class="mb-0">
-              <a class="text-muted" >Quantity :</a>
-            </h5>
+           <h5 class="mb-0">
+            <a class="input-group"> Quantity &nbsp;
+
+            <input type="button" value="-" class="button-minus" data-field="quantity">
+            <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+            <input type="button" value="+" class="button-plus" data-field="quantity">
+             </a>
+           </h5>
             <p>price:</p>
-           
+                       
           </div>
         </div>
       </div>
       </div>
+      <div align="right"> <button type="button" align="right">Check out</button></div>
       </div>
