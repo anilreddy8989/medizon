@@ -8,7 +8,7 @@ import { SupportComponent } from '../app/support/support.component';
 import { RegisterComponent } from '../app/register/register.component';
 import { CheckoutComponent } from '../app/checkout/checkout.component';
 import { CartComponent } from '../app/cart/cart.component';
-
+import { RegisterConfirmComponent } from '../app/register-confirm/register-confirm.component';
 import { MedicinesInfoComponent } from '../app/medicines-info/medicines-info.component';
 
 const routes: Routes = [
@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent},
   { path: 'medicines-info', component: MedicinesInfoComponent},
   { path: 'medicines/:id', component: MedicinesInfoComponent},
+  { path: 'registerConfirm', component: RegisterConfirmComponent},
   { path: '',
     redirectTo: '/',
     pathMatch: 'full'

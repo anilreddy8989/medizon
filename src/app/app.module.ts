@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http'; 
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,7 @@ import { RegisterComponent } from './register/register.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 import { MedicinesInfoComponent } from './medicines-info/medicines-info.component';
+import { RegisterConfirmComponent } from './register-confirm/register-confirm.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,14 @@ import { MedicinesInfoComponent } from './medicines-info/medicines-info.componen
     RegisterComponent,
     CheckoutComponent,
     CartComponent,
-    MedicinesInfoComponent
+    MedicinesInfoComponent,
+    RegisterConfirmComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
