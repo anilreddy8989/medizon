@@ -14,6 +14,7 @@ export class MedicinesInfoComponent implements OnInit {
   public medicineDetails;
   KEY = 'CART';
   value: any = null;
+  cartItems:any = [];
 
   constructor(private route: ActivatedRoute,
     private apiService: ApiService,
@@ -26,10 +27,20 @@ export class MedicinesInfoComponent implements OnInit {
     this.apiService.apiMedicine(this.medicineId).subscribe(res =>{
       console.log(res);
       this.medicineDetails=res;
+      //this.cartItems.push(this.medicineDetails);
     })
   }
   
   addToCart() {
-    this.local.set(this.KEY, this.medicineDetails);
+    ///this.cartItems.push(this.medicineDetails);
+    if(this.local.get(this.KEY) !=null){
+      this.cartItems = this.local.get(this.KEY);
+      this.cartItems.push(this.medicineDetails);
+      this.local.set(this.KEY, this.cartItems);
+    }
+   else{
+    this.cartItems.push(this.medicineDetails);
+    this.local.set(this.KEY, this.cartItems);
+   }
   }
 }
