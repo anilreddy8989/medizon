@@ -19,7 +19,7 @@
                   <a class="input-group"> Quantity &nbsp;
       
                   <input type="button" value="-" class="button-minus" (click)="dec()" data-field="quantity">
-                  <input type="number" name="quantity" class="quantity-field">
+                  <input type="number" name="counter" class="quantity-field" [(ngModel)] ="counter" ngModel>
                   <input type="button" value="+" class="button-plus" (click)="inc()" data-field="quantity">
                    </a>
             
@@ -41,5 +41,5 @@
     
       
       </div>
-      <div class="col-md-8" align="right"> <button type="button" align="right">Check out</button></div>
+      <div class="col-md-8" align="right"> <button type="button" align="right" (click)="updateCartToCheckout()">Check out</button></div>
       </div>
