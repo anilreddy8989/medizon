@@ -1,7 +1,8 @@
 <div class= "pq">
-    <h1 style = "font-size:30px;">Cart</h1>
-    <img src="assets/cart-icon-28341.png" height= "50" width= "50">
 
+    <div align="middle">
+    <h1 style = "font-size:30px;">Cart Items</h1>
+    </div>
 
 
   <div class="row">
@@ -9,7 +10,8 @@
       <div class="col-md-12">
           
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
-            <img src="assets//{{sessionDetails.image}}" alt="Neo citran" width="350px" height="350px">
+            <img src="assets//{{sessionDetails.image}}" alt="Neo citran" width="300px" height="300px">
+            
             <div class="column">
             <div class="card-body d-flex flex-column align-items-start">
            <h2> <strong class="d-inline-block mb-2 text-primary">{{sessionDetails.name}}</strong></h2>
@@ -29,11 +31,15 @@
 
            
           </div>
+          
           </div>
-        </div>
+          <div class="ml-auto p-2">
+              <a align="right" href="">&times;</a></div>
+            </div>
+          
       </div>
     
       
       </div>
-      <div align="right"> <button type="button" align="right">Check out</button></div>
+      <div class="col-md-8" align="right"> <button type="button" align="right">Check out</button></div>
       </div>
