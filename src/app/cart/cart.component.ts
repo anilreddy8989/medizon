@@ -37,8 +37,12 @@ export class CartComponent implements OnInit {
     this.counter =this.counter-1;
     //alert(this.counter);
     this.updatedPrice = this.sessionDetails.price*this.counter;
-
     }
+  }
+
+  updateCartToCheckout(){
+    this.sessionDetails.price = this.updatedPrice;
+    this.local.set(this.KEY, this.sessionDetails);
   }
 
 }

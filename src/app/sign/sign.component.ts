@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
+import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
+
 
 @Component({
   selector: 'app-sign',
@@ -14,7 +16,8 @@ export class SignComponent implements OnInit {
 
   constructor(
     private apiService: ApiService,
-    private router: Router) { }
+    private router: Router,
+    public local: LocalStorageService, public session: SessionStorageService) { }
 
   ngOnInit() {
     this.semail=this.spassword=null;
@@ -28,7 +31,10 @@ export class SignComponent implements OnInit {
       if(res == null){
         alert("Please Enter Correct Email or Password");
       }else{
-        this.router.navigate(['']);
+        this.local.set('User', res);
+        alert("Successfully Logged In");
+        window.location.reload();
+        //this.router.navigate([""]);
       }
     })
   }
