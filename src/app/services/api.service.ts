@@ -22,6 +22,16 @@ export class ApiService {
 
   apiMedicine(medicineid){
     return this.http
-      .get(`${API_URL}/medicines/`+medicineid);
+      .get(`${API_URL}/medicines/`+ medicineid);
+  }
+
+  apiPostUser(userObj){
+    return this.http
+      .post(`${API_URL}/postUser`, userObj);
+  }
+
+  apiGetUser(userEmail){
+    return this.http
+      .get(`${API_URL}/users/`+ userEmail);
   }
 }
