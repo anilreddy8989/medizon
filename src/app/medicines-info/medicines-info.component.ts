@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ApiService } from '../services/api.service';
 import { LocalStorageService, SessionStorageService, LocalStorage, SessionStorage } from 'angular-web-storage';
 
@@ -14,11 +14,15 @@ export class MedicinesInfoComponent implements OnInit {
   public medicineDetails;
   KEY = 'CART';
   value: any = null;
-  cartItems:any = [];
+  cartItems = [];
+  //arr_names = new Array(4);
+  cartItem:any;
+  cartIte :any = [];
 
   constructor(private route: ActivatedRoute,
     private apiService: ApiService,
-    public local: LocalStorageService, public session: SessionStorageService) { }
+    public local: LocalStorageService, public session: SessionStorageService,
+    private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -32,15 +36,23 @@ export class MedicinesInfoComponent implements OnInit {
   }
   
   addToCart() {
+    //let cartItem = [];
     ///this.cartItems.push(this.medicineDetails);
     if(this.local.get(this.KEY) !=null){
-      this.cartItems = this.local.get(this.KEY);
-      this.cartItems.push(this.medicineDetails);
-      this.local.set(this.KEY, this.cartItems);
+      this.cartItem = this.local.get(this.KEY);
+      //this.heroes.push(this.cartItem);
+      this.cartItem.forEach(element => {
+        this.cartIte.push(element);
+      });
+      //this.cartIte=this.cartItem;
+      this.cartIte.push(this.medicineDetails);
+      this.local.set(this.KEY, this.cartIte);
     }
    else{
-    this.cartItems.push(this.medicineDetails);
-    this.local.set(this.KEY, this.cartItems);
+    if (typeof this.cartIte !== 'undefined')
+    this.cartIte.push(this.medicineDetails);
+    this.local.set(this.KEY, this.cartIte);
    }
+   this.router.navigate(['/cart']);
   }
 }

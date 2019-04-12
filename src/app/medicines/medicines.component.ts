@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MedicinesComponent implements OnInit {
   public medicines;
+  
   constructor(private apiService: ApiService,
     private router: Router) { }
 
@@ -23,7 +24,6 @@ export class MedicinesComponent implements OnInit {
   }
   navigateToOrder($event, medicineId) {
     //alert(medicineId.$oid);
-   
     this.router.navigate(['/medicines/'+medicineId.$oid]);
   }
 }
