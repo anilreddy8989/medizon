@@ -10,11 +10,11 @@
       <div class="col-md-12">
           
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
-            <img src="assets/{{cart.image}}" alt="Neo citran" width="300px" height="300px">
+            <img src="assets/{{cart?.image}}" alt="Neo citran" width="300px" height="300px">
             
             <div class="column">
             <div class="card-body d-flex flex-column align-items-start">
-           <h2> <strong class="d-inline-block mb-2 text-primary">{{cart.name}}</strong></h2>
+           <h2> <strong class="d-inline-block mb-2 text-primary">{{cart?.name}}</strong></h2>
             <h5 class="mb-0">
                   <a class="input-group"> Quantity &nbsp;
       
@@ -31,7 +31,7 @@
             
             <div class="input-group">
             <a>Price:</a>
-            <a>{{cart.price}}</a>
+            <a>{{cart?.price}}</a>
             </div>
           </h5>
 

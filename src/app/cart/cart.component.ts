@@ -25,7 +25,7 @@ export class CartComponent implements OnInit {
     this.counter =1;
     this.sessionDetails = this.local.get(this.KEY);
     console.log(this.sessionDetails);
-    this.updatedPrice =this.sessionDetails.price;
+    //this.updatedPrice =this.sessionDetails.price;
   }
 
   inc(i){

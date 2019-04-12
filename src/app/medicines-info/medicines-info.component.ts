@@ -25,6 +25,7 @@ export class MedicinesInfoComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    this.cartItem = [];
     this.route.paramMap.subscribe(params => {
       this.medicineId = params.get("id")
     })
@@ -39,9 +40,9 @@ export class MedicinesInfoComponent implements OnInit {
     //let cartItem = [];
     ///this.cartItems.push(this.medicineDetails);
     if(this.local.get(this.KEY) !=null){
-      this.cartItem = this.local.get(this.KEY);
+      //this.cartItem.push(this.local.get(this.KEY));
       //this.heroes.push(this.cartItem);
-      this.cartItem.forEach(element => {
+      this.local.get(this.KEY).forEach(element => {
         this.cartIte.push(element);
       });
       //this.cartIte=this.cartItem;
