@@ -18,6 +18,7 @@ export class MedicinesInfoComponent implements OnInit {
   //arr_names = new Array(4);
   cartItem:any;
   cartIte :any = [];
+  selectedNumber:number = 1;
 
   constructor(private route: ActivatedRoute,
     private apiService: ApiService,
@@ -34,6 +35,13 @@ export class MedicinesInfoComponent implements OnInit {
       this.medicineDetails=res;
       //this.cartItems.push(this.medicineDetails);
     })
+  }
+
+  onRowClick(){
+    //alert(this.selectedNumber);
+    this.medicineDetails.quantityItem = this.selectedNumber;
+    this.medicineDetails.total_price = this.selectedNumber * this.medicineDetails.price;
+    console.log(this.medicineDetails);
   }
   
   addToCart() {

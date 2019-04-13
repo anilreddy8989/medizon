@@ -5,7 +5,7 @@
     </div>
 
 
-  <div class="row" *ngFor = "let cart of sessionDetails">
+  <div class="row" *ngFor = "let cart of sessionDetails, let i=index">
       
       <div class="col-md-12">
           
@@ -21,17 +21,20 @@
                   <!---<input type="button" value="-" class="button-minus" (click)="dec(counter)" data-field="quantity">
                   <input type="number" name="{{cart.name}}" class="quantity-field" [(ngModel)] ="cart.name" ngModel>
                   <input type="button" value="+" class="button-plus" (click)="inc(counter)" data-field="quantity">-->
-                  <select name="option">
+                  <!--<select name="option">
                       <option value="1">1</option>
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
                     </select>
+                  -->
+                   
+
                    </a>
             
             <div class="input-group">
             <a>Price:</a>
-            <a>{{cart?.price}}</a>
+            <a>{{cart?.total_price}}</a>
             </div>
           </h5>
 
@@ -47,5 +50,8 @@
     
       
       </div>
+      <div>
+        Grant Total: {{grand_total}}
+        </div>
       <div class="col-md-8" align="right"> <button type="button" align="right" (click)="updateCartToCheckout()">Check out</button></div>
       </div>

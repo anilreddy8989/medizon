@@ -15,6 +15,9 @@ export class CartComponent implements OnInit {
   KEY = 'CART';
   counter: number = 1;
   public updatedPrice:number;
+  selectedNumber : number;
+  //i: number = 1;
+  grand_total: number=0;
 
   constructor(private route: ActivatedRoute,
     private apiService: ApiService,
@@ -23,9 +26,11 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     this.counter =1;
+    //this.i = 1;
     this.sessionDetails = this.local.get(this.KEY);
     console.log(this.sessionDetails);
     //this.updatedPrice =this.sessionDetails.price;
+    this.getGrandTotal();
   }
 
   inc(i){
@@ -48,7 +53,22 @@ export class CartComponent implements OnInit {
   updateCartToCheckout(){
     this.sessionDetails.price = this.updatedPrice;
     this.local.set(this.KEY, this.sessionDetails);
+    this.local.set('TOTAL_PRICE', this.grand_total);
     this.router.navigate(['/checkout']);
   }
+
+  onRowClick(i){
+    //alert(i);
+    //alert(this.selectedNumber+i);
+  }
+
+  getGrandTotal(){
+    this.local.get(this.KEY).forEach(element => {
+      console.log(element);
+      this.grand_total = this.grand_total + element.total_price;
+    });
+    //alert(this.grand_total);
+  }
+  
 
 }

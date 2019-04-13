@@ -22,6 +22,12 @@
         
        </div>
     </div>
+    <div class="quantity-align">
+        Quantity &nbsp;
+        <select [(ngModel)]="selectedNumber" (ngModelChange)="onRowClick()" >
+            <option *ngFor="let n of [1,2,3,4,5]" value={{n}}>{{n}}</option>
+        </select>
+    </div>
  
     <div class="allign-name">
         <div class="text-right">                         
