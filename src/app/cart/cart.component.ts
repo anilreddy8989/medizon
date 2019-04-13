@@ -19,6 +19,7 @@ export class CartComponent implements OnInit {
   //i: number = 1;
   grand_total: number=0;
 
+
   constructor(private route: ActivatedRoute,
     private apiService: ApiService,
     public local: LocalStorageService, public session: SessionStorageService,
@@ -70,5 +71,16 @@ export class CartComponent implements OnInit {
     //alert(this.grand_total);
   }
   
+  deleteFromCart(i){
+    //alert(i);     
+    
+    this.sessionDetails.splice(i,1);
+        //console.log(this.cartItem);
+        this.local.set(this.KEY, this.sessionDetails);
+
+
+  }
 
 }
+
+
