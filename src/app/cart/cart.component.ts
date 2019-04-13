@@ -16,6 +16,7 @@ export class CartComponent implements OnInit {
   counter: number = 1;
   public updatedPrice:number;
 
+
   constructor(private route: ActivatedRoute,
     private apiService: ApiService,
     public local: LocalStorageService, public session: SessionStorageService,
@@ -51,4 +52,16 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/checkout']);
   }
 
+  deleteFromCart(i){
+    //alert(i);     
+    
+    this.sessionDetails.splice(i,1);
+        //console.log(this.cartItem);
+        this.local.set(this.KEY, this.sessionDetails);
+
+
+  }
+
 }
+
+
