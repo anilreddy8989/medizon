@@ -15,7 +15,7 @@ export class CartComponent implements OnInit {
   KEY = 'CART';
   counter: number = 1;
   public updatedPrice:number;
-  selectedNumber : number;
+  selectedNumber : number = 1;
   //i: number = 1;
   grand_total: number=0;
 
@@ -58,12 +58,8 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/checkout']);
   }
 
-  onRowClick(i){
-    //alert(i);
-    //alert(this.selectedNumber+i);
-  }
-
   getGrandTotal(){
+    this.grand_total = 0;
     this.local.get(this.KEY).forEach(element => {
       console.log(element);
       this.grand_total = this.grand_total + element.total_price;
@@ -78,8 +74,9 @@ export class CartComponent implements OnInit {
         //console.log(this.cartItem);
         this.local.set(this.KEY, this.sessionDetails);
 
-
+        this.getGrandTotal();
   }
+  
 
 }
 

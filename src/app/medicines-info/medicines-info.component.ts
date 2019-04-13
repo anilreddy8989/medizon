@@ -34,7 +34,9 @@ export class MedicinesInfoComponent implements OnInit {
       console.log(res);
       this.medicineDetails=res;
       //this.cartItems.push(this.medicineDetails);
+      this.onRowClick();
     })
+    //this.onRowClick();
   }
 
   onRowClick(){
