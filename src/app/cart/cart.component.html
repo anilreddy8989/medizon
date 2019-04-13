@@ -5,7 +5,7 @@
     </div>
 
 
-  <div class="row" *ngFor = "let cart of sessionDetails">
+  <div class="row" *ngFor = "let cart of sessionDetails; index as i">
       
       <div class="col-md-12">
           
@@ -14,7 +14,7 @@
             
             <div class="column">
             <div class="card-body d-flex flex-column align-items-start">
-           <h2> <strong class="d-inline-block mb-2 text-primary">{{cart?.name}}</strong></h2>
+           <h2> <strong class="d-inline-block mb-2">{{cart?.name}}</strong></h2>
             <h5 class="mb-0">
                   <a class="input-group"> Quantity &nbsp;
       
@@ -30,17 +30,23 @@
                    </a>
             
             <div class="input-group">
-            <a>Price:</a>
-            <a>{{cart?.price}}</a>
+            <a>Price :&nbsp;</a>
+            <a>{{cart?.price}}</a>                        
+              
             </div>
+            <div class="input-group">
+                      
+              <h6 class="blueremove" (click)="deleteFromCart(i)" >Remove</h6>
+            
+          </div>
           </h5>
 
            
           </div>
           
           </div>
-          <div class="ml-auto p-2">
-              <a align="right" href="">&times;</a></div>
+          <!--<div class="ml-auto p-2">
+              <a align="right" href="">&times;</a></div>-->
             </div>
           
       </div>
