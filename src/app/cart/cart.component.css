@@ -4,6 +4,12 @@
 .pq{ width: 70%;
     margin: auto;
 }
+
+h2 {
+  text-rendering: optimizeLegibility;  
+  text-transform: capitalize;
+}
+
 input, textarea {
       border: 1px solid #eeeeee;
       box-sizing: border-box;
@@ -15,6 +21,8 @@ input, textarea {
     input[type="button"] {
       -webkit-appearance: button;
       cursor: pointer;
+    
+      
     }
     
     input::-webkit-outer-spin-button,
@@ -33,6 +41,7 @@ input, textarea {
       min-width: 38px;
       width: auto;
       transition: all 300ms ease;
+      align-items: center;
     }
     
     .input-group .button-minus,
@@ -55,6 +64,10 @@ input, textarea {
       margin: 0 0 5px;
       resize: vertical;
     }
+
+    .input-group .blueremove{
+      color: blue;
+    }
     
     .button-plus {
       left: -13px;
@@ -64,4 +77,10 @@ input, textarea {
       -moz-appearance: textfield;
       -webkit-appearance: none;
     }
+    .btn-align{
+      margin: auto;
+      width: 25%;
+    }
+
+    
 

@@ -8,13 +8,15 @@
         <input type = "password" name = "password" placeholder="password" [(ngModel)]="password" ngModel/>
 
         <input type = "password" name = "password2" placeholder="Retypepassword" [(ngModel)]="password2" ngModel/>
-        <button type = "submit" name = "signup-button" value="Sign Up" (click)="registerUser()">Sign Up</button>
+        <div class="btn-align">
+          <div>
+        <button class="btn btn-outline-primary" type = "submit" name = "signup-button" value="Sign Up" (click)="registerUser()">Sign Up</button></div></div>
         </form>
       </div>
 
         <div class="right-box">
 
-          <span class ="signinwith">sign in with<br/> Social Network 
+          <span class ="signinwith">Sign in with Social Network<br/> 
           </span>
 
           <button class="social facebook">login with Facebook </button>

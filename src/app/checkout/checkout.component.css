@@ -12,3 +12,11 @@
     font-size: 3.5rem;
   }
 }
+
+.form-header{
+padding-top: 30px;
+}
+.btn-align{
+  margin: auto;
+  width: 25%;
+}

@@ -1,10 +1,11 @@
 <body class="bg-light">
   <div class="container">
-<div class="py-5 text-center">
-  <img class="d-block mx-auto mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-  <h2>Checkout form</h2>
+<div class="text-center">
+  <h2 class="form-header">Checkout form</h2>
    </div>
-
+<div class="py-1">
+  <h2 align="right">Your Order Total : {{grand_total}}</h2>
+  </div>
   <div class="col-md-8 order-md-1">
     <h4 class="mb-3">Billing address</h4>
     <form class="needs-validation" novalidate>
@@ -149,7 +150,11 @@
         </div>
       </div>
       <hr class="mb-4">
-      <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+      <div class="btn-align">
+        <div>
+      <button class="btn btn-primary btn-lg btn-block" width="50px" type="button">Pay Bill</button>
+        </div>
+      </div>
     </form>
   </div>
 </div>
