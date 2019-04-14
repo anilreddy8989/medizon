@@ -21,6 +21,8 @@ input, textarea {
     input[type="button"] {
       -webkit-appearance: button;
       cursor: pointer;
+    
+      
     }
     
     input::-webkit-outer-spin-button,
@@ -39,6 +41,7 @@ input, textarea {
       min-width: 38px;
       width: auto;
       transition: all 300ms ease;
+      align-items: center;
     }
     
     .input-group .button-minus,
@@ -73,6 +76,10 @@ input, textarea {
     input[type="number"] {
       -moz-appearance: textfield;
       -webkit-appearance: none;
+    }
+    .btn-align{
+      margin: auto;
+      width: 25%;
     }
 
     
