@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CartComponent } from './cart/cart.component';
 import { MedicinesInfoComponent } from './medicines-info/medicines-info.component';
+import { OrderconfirmationComponent } from './orderconfirmation/orderconfirmation.component';
 import { RegisterConfirmComponent } from './register-confirm/register-confirm.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { RegisterConfirmComponent } from './register-confirm/register-confirm.co
     CheckoutComponent,
     CartComponent,
     MedicinesInfoComponent,
+    OrderconfirmationComponent,
     RegisterConfirmComponent
   ],
   imports: [
