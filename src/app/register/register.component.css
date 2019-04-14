@@ -27,6 +27,12 @@ body{
     width: 300px;
     height: 400px;
 }
+h1
+{
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+}
 
 input[type="text"],
 input[type="password"]
@@ -76,7 +82,45 @@ input[type="submit"]:focus
     padding: 40px;
     width: 300px;
     height: 400px;
-    background-image: url("/assets/milky-way.jpg");
+    
     background-size:cover;
+    background-color: burlywood;
     background-position: center;
+}
+.right-box .signinwith
+{
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+button.social
+{
+    margin-bottom: 20px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.facebook
+{
+    background: #32508e;
+
+}
+.twitter
+{
+    background: #55acee;
+    
+}
+.google
+{
+    background: #dd4b39;
+    
 }
